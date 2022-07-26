@@ -276,9 +276,10 @@ This work is based on results obtained from a project commissioned by the Public
 # Contact
 * [Mohammad Golam Sohrab](https://orcid.org/0000-0001-5540-7834): sohrab.mohammad@aist.go.jp
 * Khoa N. A. Duong
-* Hai-Long Trieu
-* Makoto Miwa
 * Goran Topić
+* Nogami-Itoh
+* Masataka Kuroda
+* Yayoi Natsume-Kitatani
 * Masami Ikeda
 * Hiroya Takamura
 
@@ -286,16 +287,16 @@ This work is based on results obtained from a project commissioned by the Public
 If you find this work helpful, please use the following citation:
 
 ```
-@inproceedings{bennerd_2020,
-    title = "BENNERD: A Neural Named Entity Linking System for COVID-19",
-    author = "Sohrab, Mohammad Golam and Duong, Khoa and Miwa, Makoto and Topić, Goran and Masami, Ikeda and Takamura, Hiroya",
-    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
-    month = oct,
-    year = "2020",
+@inproceedings{biomed_curator_2022,
+    title = "BioMedCurator: an Interactive Web Application for Template Generation from Biomedical Literature",
+    author = "Sohrab, Mohammad Golam and Duong, Khoa and Topić, Goran and Masami, Ikeda and Takamura, Hiroya",
+    booktitle = "To be appear",
+    month = To be appear,
+    year = "To be appear",
     address = "Online",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/2020.emnlp-demos.24",
-    pages = "182--188",
+    publisher = "To be appear",
+    url = "To be appear",
+    pages = "To be appear",
 } 
 ```
 
