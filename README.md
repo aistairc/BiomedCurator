@@ -1,9 +1,9 @@
-# BENNERD
+# BioMedCurator
 
 - [Overview](#overview)
-- [BENNERD DEMO](#bennerd-demo)
-- [CORD-NERD Data Set](#cord-nerd-dataset)
-- [BENNERD Description](#bennerd-description)
+- [BioMedCurator DEMO](#bennerd-demo)
+- [BioMedCurator Data Set](#cord-nerd-dataset)
+- [BioMedCurator Description](#bennerd-description)
 - [Evaluation](#evaluation)
 - [Acknowledgement](#acknowledgement)
 - [Contact](#contact)
