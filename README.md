@@ -85,7 +85,7 @@ Annotation tasks like entity mention detection, relation extraction; extraction 
 ## BioMedCurator System
 BioMedCurator system mainly comprises two platforms: BioMedCurator web interface and BioMedCurator back-end server. The overall workflow of the BioMedCurator system is illustrated as below.
 
-![Work Flow](images/BENNERD_WORK_FLOW-1.png)
+![Work Flow](images/bio_data_extractor.png)
 
 ### BioMedCurator Web Interface
 In [BioMedCurator web interface](#biomedcurator-demo), the user interface contains input panel, Enter a PubMed or ClinicalTrailas article ID here tab, Or select a sample ID below tab. For a given PubMed/ClinicalTrail ID from users or loading a sample text from a sample list, the output panel show the information of 61 fields based on pretrained BioMedCurator model. The users will able to download article from Download Article tab, or can extract information from the Download extracted information tab. The system will also provide the reference article URL for user reference. 
