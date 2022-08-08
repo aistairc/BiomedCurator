@@ -24,35 +24,53 @@ Users can access our demo via [http://underconstruction/biomedcurator/](http://u
 
 # BioMedCurator Data Set
 
-We are the first to perform entity linking (EL) task on [CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) data set. [CORD-NER](https://uofi.app.box.com/s/k8pw7d5kozzpoum2jwfaqdaey1oij93x) dataset comprises only NER  task.  To solve the EL task, we expand this dataset by leveraging a CUI for each mention in the [CORD-NER](https://uofi.app.box.com/s/k8pw7d5kozzpoum2jwfaqdaey1oij93x) dataset, we call this covid-19 open research dataset for named entity recognition and disambiguation [CORD-NERD](https://drive.google.com/file/d/1uJgtqqggkVXv7uGLuG3wYWstIaa7bqRO/view?usp=sharing) dataset that includes UMLS-based training, development, and test sets. Available at, 
-
-## Manually Annotated Training Set
-
-In addition with the [UMLS-based test set](#umls-based-test-set), we assigned a biologist to annotate 1,000 random sentences based on chemical, disease, and gene types along with its corresponding CUI to create a [manually annotated test set](https://github.com/aistairc/BENNERD/blob/master/data/Manually_Annotated_Test_Set.zip). 
+We conduct experiments on our curated data-sets based on Pubmed and ClinicalTrials to address the biomedical data curation extraction tasks. The Pubmed and ClinicalTrials data-sets  consist of 2,570 and 2,371 pubmed and clinical trials related scientific articles respectively. Biologists are assigned to annotate the entire PubMed and ClinicalTrial data-sets based on 61 fields. We use the annotated templete to train our BioMedCurator model.
 
 ## Sample Data Format of BioMedCurator 
-Examples of annotation for an entity (**T**), a normalization (**N**) are shown in the following. Text-bound annotation identifies a specific span of text and assigns it a type. In text-bound annotation (**T1**) of a span “**Angiotensin-converting enzyme 2**”,  **0** denotes start-offset and **31** denotes end-offset of the annotation span, where type is **GENE_OR_GENOME**. The normalization annotation (**N1**) is attached to the text-bound annotation (**T1**) which is associated with the unified medical language system ([UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html)) entry with the [UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html) concept unique identifier (CUI) as **C0960880**. 
+Examples of annotation for an entity (**T**), a relation (**R**) are shown in the following. Text-bound annotation identifies a specific span of text and assigns it a type. In text-bound annotation (**T1**) of a span “**Angiotensin-converting enzyme 2**”,  **0** denotes start-offset and **31** denotes end-offset of the annotation span, where type is **GENE_OR_GENOME**. The normalization annotation (**N1**) is attached to the text-bound annotation (**T1**) which is associated with the unified medical language system ([UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html)) entry with the [UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html) concept unique identifier (CUI) as **C0960880**. Entites are detected based on the reference annotated templete created by biologists.  
 ```
-    T1	GENE_OR_GENOME 0 31	Angiotensin-converting enzyme 2
-    N1	Reference T1	UMLS:C0960880
-    T2	GENE_OR_GENOME 33 37	ACE2
-    N2	Reference T2	UMLS:C1422064
-    T3	CORONAVIRUS 44 54	SARS-CoV-2
-    N3	Reference T3	UMLS:C5203676
-    T4	CHEMICAL 55 63	receptor
-    N4	Reference T4	UMLS:C0597357
-    T5	CORONAVIRUS 120 130	SARS-CoV-2
-    N5	Reference T3	UMLS:C5203676
-    T6	EVOLUTION 158 170	phylogenetic
-    N6	Reference T6	UMLS:cui_less
-    T7	WILDLIFE 195 198	bat
-    N7	Reference T7	UMLS:C1412726
-    T8	CORONAVIRUS 214 224	SARS-CoV-2
-    N8	Reference T3	UMLS:C5203676
-    T9	NORP 259 277	intermediate hosts
-    N9	Reference T9	UMLS:cui_less
-    T10	CORONAVIRUS 282 292	SARS-CoV-2
-    N10	Reference T3	UMLS:C5203676
+    T1	drug/therapy	Cilengitide
+    T2	dose	600 mg/m2   
+    R1  T1  T2
+    T3	drug/therapy	Docetaxel
+    T4	dose	75 mg/m2  
+    R2  T3  T4
+    T5	drug/therapy	Docetaxel
+    T6	dose	75 mg/m2 
+    R3  T5  T6
+    T7	drug/therapy	Cilengitide
+    T8	dose	240 mg/m2 
+    R4  T7  T8
+    T9	drug/therapy	Cilengitide
+    T10	dose	400 mg/m2 
+    R5  T11  T10
+    T11	drug/therapy	Cilengitide
+    T12	dose	600 mg/m2
+    R6  T11  T12
+    T13	drug/therapy	Docetaxel
+    T14	dose	75 mg/m2 
+    R7  T13  T14
+    T15	drug/therapy	Cilengitide
+    T16	dose	240 mg/m2 
+    R8  T15  T16
+    T17	drug/therapy	Cilengitide
+    T18	dose	400 mg/m2 
+    R9  T17  T18
+    T19	drug/therapy	Cilengitide
+    T20	dose	600 mg/m2
+    R10  T19  T20
+    T21	drug/therapy	Docetaxel
+    T22	dose	75 mg/m2 
+    R11  T21  T22
+    T23	drug/therapy	Cilengitide|Docetaxel
+    T24	dose	240 or 400 or 600 mg/m2 (Cilengitide)|75 mg/m2 (Docetaxel) 
+    R12  T23  T24
+    T25	drug/therapy	Cilengitide|Docetaxel
+    T26	dose	240 or 400 or 600 mg/m2 (Cilengitide)|75 mg/m2 (Docetaxel) 
+    R13  T25  T26
+    T27	drug/therapy	Cilengitide|Docetaxel
+    T28	dose	240 or 400 or 600 mg/m2 (Cilengitide)|75 mg/m2 (Docetaxel)
+    R14  T27  T28
 ```
 
 # BioMedCurator Description
