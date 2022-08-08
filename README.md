@@ -2,7 +2,7 @@
 
 - [Overview](#overview)
 - [BioMedCurator DEMO](#biomedcurator-demo)
-- [BioMedCurator Data Set](#biomedcurator-dataset)
+- [BioMedCurator Data-Set](#biomedcurator-dataset)
 - [BioMedCurator Description](#biomedcurator-description)
 - [Evaluation](#evaluation)
 - [Acknowledgement](#acknowledgement)
@@ -22,7 +22,7 @@ Users can access our demo via [http://underconstruction/biomedcurator/](http://u
 
 ![Demo interface](images/BioMedCurator.png)
 
-# BioMedCurator Data Set
+# BioMedCurator Data-Set
 
 We conduct experiments on our curated data-sets based on Pubmed and ClinicalTrials to address the biomedical data curation extraction tasks. The Pubmed and ClinicalTrials data-sets  consist of 2,570 and 2,371 pubmed and clinical trials related scientific articles respectively. Biologists are assigned to annotate the entire PubMed and ClinicalTrial data-sets based on 61 fields. We use the annotated templete to train our BioMedCurator model.
 
