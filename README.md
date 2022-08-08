@@ -26,53 +26,6 @@ Users can access our demo via [http://underconstruction/biomedcurator/](http://u
 
 We conduct experiments on our curated data-sets based on Pubmed and ClinicalTrials to address the biomedical data curation extraction tasks. The Pubmed and ClinicalTrials data-sets  consist of 2,570 and 2,371 pubmed and clinical trials related scientific articles respectively. Biologists are assigned to annotate the entire PubMed and ClinicalTrial data-sets based on 61 fields. We use the annotated templete to train our BiomedCurator model.
 
-## Sample Data Format of BiomedCurator 
-Examples of annotation for an entity (**T**), a relation (**R**) are shown in the following. Text-bound annotation identifies a specific span of text and assigns it a type. In text-bound annotation (**T1**) of a span “**Cilengitide**”,  where type is **drug/therapy**. The relation annotation (**R1**) where the text-bound annotation (**T1**) has a realtion to text-bound annotation (**T2**). Entites are detected based on the reference annotated templete created by biologists.  
-```
-    T1	drug/therapy	Cilengitide
-    T2	dose	600 mg/m2   
-    R1  T1  T2
-    T3	drug/therapy	Docetaxel
-    T4	dose	75 mg/m2  
-    R2  T3  T4
-    T5	drug/therapy	Docetaxel
-    T6	dose	75 mg/m2 
-    R3  T5  T6
-    T7	drug/therapy	Cilengitide
-    T8	dose	240 mg/m2 
-    R4  T7  T8
-    T9	drug/therapy	Cilengitide
-    T10	dose	400 mg/m2 
-    R5  T11  T10
-    T11	drug/therapy	Cilengitide
-    T12	dose	600 mg/m2
-    R6  T11  T12
-    T13	drug/therapy	Docetaxel
-    T14	dose	75 mg/m2 
-    R7  T13  T14
-    T15	drug/therapy	Cilengitide
-    T16	dose	240 mg/m2 
-    R8  T15  T16
-    T17	drug/therapy	Cilengitide
-    T18	dose	400 mg/m2 
-    R9  T17  T18
-    T19	drug/therapy	Cilengitide
-    T20	dose	600 mg/m2
-    R10  T19  T20
-    T21	drug/therapy	Docetaxel
-    T22	dose	75 mg/m2 
-    R11  T21  T22
-    T23	drug/therapy	Cilengitide|Docetaxel
-    T24	dose	240 or 400 or 600 mg/m2 (Cilengitide)|75 mg/m2 (Docetaxel) 
-    R12  T23  T24
-    T25	drug/therapy	Cilengitide|Docetaxel
-    T26	dose	240 or 400 or 600 mg/m2 (Cilengitide)|75 mg/m2 (Docetaxel) 
-    R13  T25  T26
-    T27	drug/therapy	Cilengitide|Docetaxel
-    T28	dose	240 or 400 or 600 mg/m2 (Cilengitide)|75 mg/m2 (Docetaxel)
-    R14  T27  T28
-```
-
 # BiomedCurator Description
 
 ## Introduction
