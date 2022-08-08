@@ -109,7 +109,7 @@ We presented the **BioMedCurator** system for entity detection, relation extract
 We evaluate our BioMedCurator system from several aspects: TODO 
 
 # Acknowledgement
-This work is based on results obtained from a project commissioned by the Public/Private R&D Investment Strategic Expansion PrograM (PRISM)
+This work is based on results obtained from a project commissioned by the Public/Private R&D Investment Strategic Expansion PrograM ([PRISM](https://www.nibiohn.go.jp/prism/about/))
 
 # Contact
 * [Mohammad Golam Sohrab](https://orcid.org/0000-0001-5540-7834): sohrab.mohammad@aist.go.jp
