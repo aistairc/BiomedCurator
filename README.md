@@ -20,7 +20,7 @@ The BioMedCurator system provides a web interface to facilitate the process of t
 
 Users can access our demo via [http://underconstruction/biomedcurator/](http://underconstruction/biomedcurator/).
 
-![Demo interface](images/demo-screenshot.png)
+![Demo interface](images/BioMedCurator.png)
 
 # BioMedCurator Data Set
 
