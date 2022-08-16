@@ -38,10 +38,21 @@ Annotation tasks like entity mention detection, relation extraction; extraction 
 ## BiomedCurator System
 BiomedCurator system mainly comprises two platforms: BiomedCurator web interface and BiomedCurator back-end server. The overall workflow of the BiomedCurator system is illustrated as below.
 
-![Work Flow](images/bio_data_extractor.png)
+![Work Flow](images/biomed_data_extractor.png)
 
 ### BiomedCurator Web Interface
-In [BiomedCurator web interface](#biomedcurator-demo), the user interface contains input panel, Enter a PubMed or ClinicalTrailas article ID here tab, Or select a sample ID below tab. For a given PubMed/ClinicalTrail ID from users or loading a sample text from a sample list, the output panel show the information of 61 fields based on pretrained BiomedCurator model. The users will able to download article from Download Article tab, or can extract information from the Download extracted information tab. The system will also provide the reference article URL for user reference. 
+In [BiomedCurator web interface](#biomedcurator-demo), the user interface contains input panel, Enter a PubMed or ClinicalTrailas article ID here tab, Or select a sample ID below tab. For a given PubMed/ClinicalTrail ID from users or loading a sample text from a sample list, the output panel show the information of 61 fields based on pretrained BiomedCurator model. 
+
+![BiomedCurator Description1](images/biomed_1.png)
+
+In the result box,the users will able to download article from Download Article tab, or can extract information from the Download extracted information tab in plain text and JSON formats. The system will also provide the reference article URL for user reference. The BiomedCurator also shows the processing time from user input to result box through the backend models.
+
+![BiomedCurator Description2](images/biomed_2.png)
+
+The results are organized into sections. The user can click on the "+/-" button (the redbox) to expand/minimize its content.
+For example, the Intervention Characteristics section shows relations between Drug and Dose extracted from the article.
+
+![BiomedCurator Description3](images/biomed_3.png)
 
 ### BiomedCurator Back-end
 The BiomedCurator back-end is for storing tools (e.g., NER, relatuion extraction based on generation model, classification model, pattern- and knowledge-based information extraction models) that transform into a pipeline. 
