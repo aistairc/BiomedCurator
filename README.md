@@ -52,7 +52,7 @@ In the result box,the users will able to download article from Download Article 
 The results are organized into sections. The user can click on the "V/Ʌ" button to expand/minimize its content.
 For example, the Intervention Characteristics section shows relations between Drug and Dose extracted from the article.
 
-![BiomedCurator Description3](images/biomed_3.png)
+![BiomedCurator Description3](images/biomed_curator_2_1.png)
 
 ### BiomedCurator Back-end
 The BiomedCurator back-end is for storing tools (e.g., NER, relatuion extraction based on generation model, classification model, pattern- and knowledge-based information extraction models) that transform into a pipeline. 
