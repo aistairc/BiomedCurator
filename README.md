@@ -30,9 +30,9 @@ We conduct experiments on our curated data-sets based on Pubmed and ClinicalTria
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Category                Field name                          NLPT    Description
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        reference_type                      TODO    Source of the article. Ex: PubMed or Clinical trial
-Reference               reference_id                        TODO    Unique Pubmed ID or Clinical trial id of the curated document
-Information             associated_clinical trials          TODO    Provides the associated clinicaltrial ids for which the results were published
+                        reference_type                      FV    Source of the article. Ex: PubMed or Clinical trial
+Reference               reference_id                        PE    Unique Pubmed ID or Clinical trial id of the curated document
+Information             associated_clinical trials          FV    Provides the associated clinicaltrial ids for which the results were published
                         s_no                                TODO    Each assertion has given a unique number
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                                 
                         drug/therapy                        EE+RE   Captured the list of authors focus drug/s (substance intended for use in the cure, mitigation, treatment, or prevention of disease, to affect the structure or any function of the body or for use as a component of a medicine) of case group   
