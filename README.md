@@ -53,7 +53,7 @@ Characteristics         Stage                               TODO    Stages of th
                         Grade                               TODO    Grading of the disease Eg: Grade I, II, III, IV, etc
                         Histopathology                      TODO    Additional details of the disease mentioned in the article Ex: Stage, grade, or histopathology etc.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                   
-                        BNMR                                TODO    Complete name of the biomarker. Abbreviations are extended for ease of understanding.
+                        BNAMIR                              TODO    Complete name of the biomarker. Abbreviations are extended for ease of understanding.
                         marker_type                         TODO    Represents the type of the biomarker based on the techniques used to measure the biomarker Eg: Biochemical, Genomic etc.
                         marker_nature                       TODO    Represents the chemical nature of the biomarker based on the techniques used to measure the biomarker Eg: Protein, Gene, Lipid etc.
                         Entrez id                           EL      Unique ID as provided by the NCBI Entrez gene database for each gene
@@ -104,7 +104,7 @@ details                 Article/URL                         TODO    Name of the 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ```
-BNMR stands for biomarker_name_as_mentioned_in_reference
+BNAMIR stands for biomarker_name_as_mentioned_in_reference
 # BiomedCurator Description
 
 ## Introduction
