@@ -90,7 +90,7 @@ If you find this work helpful, please use the following citation:
 
 ```
 @inproceedings{biomed_curator_2022,
-    title = "BioMedCurator: an Interactive Web Application for Template Generation from Biomedical Literature",
+    title = "BioMedCurator: an Interactive Web Application for Template Filler from Biomedical Literature",
     author = "To be appeared",
     booktitle = "To be appeared",
     month = To be appeared,
