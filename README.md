@@ -20,7 +20,7 @@ The BiomedCurator system provides a web interface to facilitate the process of c
 
 Users can access our demo via [http://underconstruction/biomedcurator/](http://underconstruction/biomedcurator/).
 
-![Demo interface](images/BioMedCurator.png)
+![Demo interface](images/biomed_curator_3.png)
 
 # BiomedCurator Data-Set
 
@@ -43,13 +43,13 @@ BiomedCurator system mainly comprises two platforms: BiomedCurator web interface
 ### BiomedCurator Web Interface
 In [BiomedCurator web interface](#biomedcurator-demo), the user interface contains input panel, Enter a PubMed or ClinicalTrailas article ID here tab, Or select a sample ID below tab. For a given PubMed/ClinicalTrail ID from users or loading a sample text from a sample list, the output panel show the information of 61 fields based on pretrained BiomedCurator model. 
 
-![BiomedCurator Description1](images/biomed_1.png)
+![BiomedCurator Description1](images/biomed_curator_1.png)
 
 In the result box,the users will able to download article from Download Article tab, or can extract information from the Download extracted information tab in plain text and JSON formats. The system will also provide the reference article URL for user reference. The BiomedCurator also shows the processing time from user input to result box through the backend models.
 
-![BiomedCurator Description2](images/biomed_2.png)
+![BiomedCurator Description2](images/biomed_curator_2.png)
 
-The results are organized into sections. The user can click on the "+/-" button (the redbox) to expand/minimize its content.
+The results are organized into sections. The user can click on the "V/Ʌ" button to expand/minimize its content.
 For example, the Intervention Characteristics section shows relations between Drug and Dose extracted from the article.
 
 ![BiomedCurator Description3](images/biomed_3.png)
