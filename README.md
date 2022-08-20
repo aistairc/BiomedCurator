@@ -30,57 +30,57 @@ We conduct experiments on our curated data-sets based on Pubmed and ClinicalTria
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Category                Field name                          NLPT    Description
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        reference_type                      FV    Source of the article. Ex: PubMed or Clinical trial
-Reference               reference_id                        PE    Unique Pubmed ID or Clinical trial id of the curated document
-Information             associated_clinical trials          FV    Provides the associated clinicaltrial ids for which the results were published
-                        s_no                                TODO    Each assertion has given a unique number
+                        reference_type                      FV      Source of the article. Ex: PubMed or Clinical trial
+Reference               reference_id                        PE      Unique Pubmed ID or Clinical trial id of the curated document
+Information             associated_clinical trials          FV      Provides the associated clinicaltrial ids for which the results were published
+                        s_no                                FV      Each assertion has given a unique number
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                                 
-                        drug/therapy                        EE+RE   Captured the list of authors focus drug/s (substance intended for use in the cure, mitigation, treatment, or prevention of disease, to affect the structure or any function of the body or for use as a component of a medicine) of case group   
-                        reference_drug/therapy              TODO    Captured the list of authors focus drug/s (substance intended for use in the cure, mitigation, treatment, or prevention of disease, to affect the structure or any function of the body or for use as a component of a medicine) of reference group
-                        treatment_details                   TODO    Detail description of the treatment, including but not limited to patient details, drug/therapy, dose/cycles, duration, route, schedule, analysis 
-                        dose                                EE+RE   It represents the concentration value of the drug used in the given reference
-Intervention            route of administration             TODO    The route through which the drug is administered
-Characteristics         duration                            EE+RE   Time period of the treatment
+                        drug/therapy                        RE      Captured the list of authors focus drug/s (substance intended for use in the cure, mitigation, treatment, or prevention of disease, to affect the structure or any function of the body or for use as a component of a medicine) of case group   
+                        reference_drug/therapy              RE      Captured the list of authors focus drug/s (substance intended for use in the cure, mitigation, treatment, or prevention of disease, to affect the structure or any function of the body or for use as a component of a medicine) of reference group
+                        treatment_details                   Skip    Detail description of the treatment, including but not limited to patient details, drug/therapy, dose/cycles, duration, route, schedule, analysis 
+                        dose                                RE      It represents the concentration value of the drug used in the given reference
+Intervention            route of administration             EL      The route through which the drug is administered
+Characteristics         duration                            RE      Time period of the treatment
                         CAS id                              EL      Chemical abstracts service registry number of the drug
                         ChEMBL                              EL      Unique id as provided by ChEMBL
                         drug bank id                        EL      Drug bank id for the given drug
                         approved_drug                       Skip    Name of the drug which is approved by any approval authority
                         approval_authority                  Skip    Name of the organization (or) institution has the authority to approve the respective drug. Ex: FDA
 ----------------------------------------------------------------------------------------------------------------------------------------------------------           
-                        disease_name                        TODO    Name of the focused indication for which the biomarker was studied
-Disease                 disease_sub_category                TODO    Represents the subtype or any state of the disease mentioned in the given reference
-Characteristics         Stage                               TODO    Stages of the disease Eg: Stage I, II, III, IV, etc
-                        Grade                               TODO    Grading of the disease Eg: Grade I, II, III, IV, etc
-                        Histopathology                      TODO    Additional details of the disease mentioned in the article Ex: Stage, grade, or histopathology etc.
+                        disease_name                        NER+PE  Name of the focused indication for which the biomarker was studied
+Disease                 disease_sub_category                NER+PE  Represents the subtype or any state of the disease mentioned in the given reference
+Characteristics         Stage                               PE      Stages of the disease Eg: Stage I, II, III, IV, etc
+                        Grade                               PE      Grading of the disease Eg: Grade I, II, III, IV, etc
+                        Histopathology                      Skip    Additional details of the disease mentioned in the article Ex: Stage, grade, or histopathology etc.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                   
-                        BNAMIR                              TODO    Complete name of the biomarker. Abbreviations are extended for ease of understanding.
-                        marker_type                         TODO    Represents the type of the biomarker based on the techniques used to measure the biomarker Eg: Biochemical, Genomic etc.
-                        marker_nature                       TODO    Represents the chemical nature of the biomarker based on the techniques used to measure the biomarker Eg: Protein, Gene, Lipid etc.
+                        BNAMIR                              NER     Complete name of the biomarker. Abbreviations are extended for ease of understanding.
+                        marker_type                         NER     Represents the type of the biomarker based on the techniques used to measure the biomarker Eg: Biochemical, Genomic etc.
+                        marker_nature                       NER     Represents the chemical nature of the biomarker based on the techniques used to measure the biomarker Eg: Protein, Gene, Lipid etc.
                         Entrez id                           EL      Unique ID as provided by the NCBI Entrez gene database for each gene
 Biomarker               Uniprot id                          EL      Protein accession number of UniprotKB database
-Details                 type_of_variation                   TODO    Represents standard HGVS (Human Genome Variation Society) constructs unique for each variation
+Details                 type_of_variation                   PE      Represents standard HGVS (Human Genome Variation Society) constructs unique for each variation
                         rs_id                               EL      Represents the unique reference number for each SNP at a specific position. Taken from NCBI site – (dbSNP) Eg: rs763110
                         HGVS Name                           EL      Field describes nucleotide/DNA (c.) change as per the HGVS format (the nucleotide/genomic numbering should be as in article only)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        association                         TODO    Describes about the high level type/category of biomarker association with outcomes. Associations are of 5 types: Gene - drug relationships; Gene - gene interactions; Gene - pathway relationships; Gene - phenotype relationships; Gene - transcript information
-Biomarker               marker_alteration                   TODO    Represents the type of alteration or measurement done for biomarker Eg: Gene expression, Polymorphism, Biomarker level etc.
-association             type of alteration                  TODO    Represents the modification of the marker mentioned in the article i.e change of biomarker expression or levels (the term is exactly taken from the article for user reference) . Eg: High; Low; Decreases; Association; Upregulation etc.
-with outcomes           phenotype                           TODO    Biomarker correlates or associates with any phenotype character, end point, outcome, any physiological process (which is direct indicator of the disease) and other biomarkers of the study sample 
-                        phenotype_alteration                TODO    Represents the state of change for the outcome variables which are associated with the studied biomarker
+                        association                         TC      Describes about the high level type/category of biomarker association with outcomes. Associations are of 5 types: Gene - drug relationships; Gene - gene interactions; Gene - pathway relationships; Gene - phenotype relationships; Gene - transcript information
+Biomarker               marker_alteration                   PE      Represents the type of alteration or measurement done for biomarker Eg: Gene expression, Polymorphism, Biomarker level etc.
+association             type of alteration                  KB      Represents the modification of the marker mentioned in the article i.e change of biomarker expression or levels (the term is exactly taken from the article for user reference) . Eg: High; Low; Decreases; Association; Upregulation etc.
+with outcomes           phenotype                           TC      Biomarker correlates or associates with any phenotype character, end point, outcome, any physiological process (which is direct indicator of the disease) and other biomarkers of the study sample 
+                        phenotype_alteration                VF      Represents the state of change for the outcome variables which are associated with the studied biomarker
                         significance                        TC      Represents the level of significance of P value between different groups Eg: Non-significant or Significant
-                        p_value                             TODO    P value (Significance) between the different groups for comparison of biomarker result values or any other values related to biomarker. Ex: P=0.016
+                        p_value                             FV      P value (Significance) between the different groups for comparison of biomarker result values or any other values related to biomarker. Ex: P=0.016
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        application                         TODO    Denotes the utility of the biomarker for a given condition in a specific reference (either clinical trial or pubmed article).  
+                        application                         PE      Denotes the utility of the biomarker for a given condition in a specific reference (either clinical trial or pubmed article).  
 Utility                 author_conclusion                   TC      Represents the utility of the biomarker from the author’s perspective in the given reference. Yes indicates that author, in the reference, supports the application of the biomarker for the given indication. No indicates that author in the reference does not support the application of the biomarker for the given indication.
-                        evidence_statement                  TODO    Gives the structured description of the application text of the biomarker in a given condition specific to each reference and clinical status.
+                        evidence_statement                  Skip    Gives the structured description of the application text of the biomarker in a given condition specific to each reference and clinical status.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
                         study_type (Clinical/PreClinical)   EE      Represents the status of the clinical study Ex: Clinical, Preclinical etc
-                        Cell line/ Model Name               EE      Represents the cell lines used in the preclinical model/It represents the preclinical model Eg: Mouse, rat etc
-                        total_sample_number                 TODO    Denotes total number of participants from both study and reference sample group in a particular study
-Study                   patient_number (case)               TODO    This field is used to capture the study group sample size for the curated assertion from the article
-characteristics         patient_number (reference)          TODO    This field is used to capture the reference group sample size for the curated assertion from the article
-                        age (case)                          TODO    Used to capture the study sample age from the article
-                        gender (case)                       TODO    Used to capture the gender for studied samples from the article
+                        Cell line/ Model Name               FV      Represents the cell lines used in the preclinical model/It represents the preclinical model Eg: Mouse, rat etc
+                        total_sample_number                 PE      Denotes total number of participants from both study and reference sample group in a particular study
+Study                   patient_number (case)               PE      This field is used to capture the study group sample size for the curated assertion from the article
+characteristics         patient_number (reference)          FV      This field is used to capture the reference group sample size for the curated assertion from the article
+                        age (case)                          PE      Used to capture the study sample age from the article
+                        gender (case)                       PE      Used to capture the gender for studied samples from the article
                         ethnicity (case)                    EE      This field represents the nationality/ethnicity of the study group as stated in the article
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
                         trial_status                        Skip    Current stage of a clinical study. Ex: Completed, Terminated etc.
@@ -89,18 +89,18 @@ Trial level             phase                               EE      Represents t
 information             inclusion_criteria                  Skip    Description on the Inclusion criteria for the patients in the clinical study
                         exclusion_criteria                  Skip    Description on the Exclusion criteria for the patients in the clinical study
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        allocation                          TODO    Assigning trial subjects to treatment or control groups. Ex: Non-randomized, Randomised
+                        allocation                          PE      Assigning trial subjects to treatment or control groups. Ex: Non-randomized, Randomised
 Study design            intervention_model                  Skip    Type of intervention model from the study. Ex: Single Group Design, Parallel Design, Crossover Design and Factorial Design
-                        masking                             TODO    Types of Masking include None, Open Label, Single Blind Masking and Double Blind Masking
+                        masking                             PE      Types of Masking include None, Open Label, Single Blind Masking and Double Blind Masking
                         primary_purpose                     Skip    Represents purpose of the study primarily under taken for the research
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-Additional details      pathway_name                        Skip    Names of the pathways in which a biomarker has a role. Taken from KEGG database
+Additional details      pathway_name                        FV      Names of the pathways in which a biomarker has a role. Taken from KEGG database
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-                        Source                              TODO    Represents whether the curated data is from full-text or abstract of the article or clinicaltrials
-                        Title                               TODO    Title of the article
-Reference               Authors                             TODO    Authors of the article
-details                 Article/URL                         TODO    Name of the journal or specific links from which the information is captured
-                        Year                                TODO    Year in which the given article published Ex: Article published year for Pubmed articles and First received year is considered for Clinicaltrials
+                        Source                              FV      Represents whether the curated data is from full-text or abstract of the article or clinicaltrials
+                        Title                               PE      Title of the article
+Reference               Authors                             PE      Authors of the article
+details                 Article/URL                         PE      Name of the journal or specific links from which the information is captured
+                        Year                                PE      Year in which the given article published Ex: Article published year for Pubmed articles and First received year is considered for Clinicaltrials
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ```
