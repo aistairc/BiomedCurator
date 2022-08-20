@@ -25,6 +25,8 @@ Users can access our demo via [http://underconstruction/biomedcurator/](http://u
 # BiomedCurator Data-Set
 
 We conduct experiments on our curated data-sets based on Pubmed and ClinicalTrials to address the biomedical data curation extraction tasks. The Pubmed and ClinicalTrials data-sets  consist of 2,570 and 2,371 pubmed and clinical trials related scientific articles respectively. Biologists are assigned to annotate the PubMed and ClinicalTrial data-sets based on 61 fields from 11 categories. We use the annotated templete to train our BiomedCurator model. The overview of categories, fields, description and related natural language processing techniques (NLPT) are illustrated below. The first and columns indicate category and its fields name. The third column stands for diffrent NLP approaches are applied in each field. In this column, PE, RE, EE, EL, and TC refer to pattern-based extraction, relation extrcation, entity extraction, entity linking, and text classification-based approaches are applied for data curation. Besides, fixed Value (FV) means N/A or a specific value in the curated data. Skip indicates some fields are skipped due to lack of training samples.
+
+```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Category                Field name                          NLPT    Description
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -100,8 +102,8 @@ Reference               Authors                             PE      Authors of t
 details                 Article/URL                         PE      Name of the journal or specific links from which the information is captured
                         Year                                PE      Year in which the given article published Ex: Article published year for Pubmed articles and First received year is considered for Clinicaltrials
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ```
+
 BNAMIR stands for biomarker_name_as_mentioned_in_reference
 # BiomedCurator Description
 
