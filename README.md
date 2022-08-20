@@ -137,19 +137,14 @@ For example, the Intervention Characteristics section shows relations between Dr
 The BiomedCurator back-end is for storing tools (e.g., NER, relatuion extraction based on generation model, classification model, pattern- and knowledge-based information extraction models) that transform into a pipeline. 
 
 #### Neural Named Entity Recognition
-Named entity recognition (NER) is a task of finding entities with specific semantic types such as Protein, Cell, and RNA in text. We build neural NER model, based on the [BERT](https://www.aclweb.org/anthology/N19-1423.pdf) model. The layer receives subword sequences and assigns contextual representations to the subwords via BERT. 
+In the named entity recognition (NER) task, two pre-trained NER models based on general and biomedical dataset are used.  
+We use the well-known spaCy NER model pre-trained on OntoNotes 5 dataset to extract the required information to fill the **ethnicity** field in our system. In contrast to fill the **Biomarker_name** field, the Spacy NER model pre-trained on BioNLP13CG is used. 
 
 #### Generative Relation Extraction
 In the geenrative-based relation extraction, currently we are formalizing binary relation extraction task as a template generation problem. For a given paragraph, we expect to train a model that can generate a sequence in our predefined structure so called templates. For the sequence-to-sequence model, we utilize the [BigBird](https://arxiv.org/abs/2007.14062) model that can process up to 8x longer sequence than BERT. Therefore, for the sequence-to-sequence model, we utilize the Big Bird model to extract the relations from a given paragraph which is an input to the [BigBird](https://arxiv.org/abs/2007.14062) model.
 
 ## Summary
 We presented the **BiomedCurator** system for entity detection, relation extraction, entity linking, information extraction based on pattern and knowledge base, hoping that we can bring insights for the biomedical studies on making scientific discoveries. The **BiomedCurator** system is continually evolving; we will continue to improve the system as well as to implement new functions such as n-ary relation extraction to further facilitate **BiomedCurator** research.
-
-# Evaluation
-
-## TODO
-
-We evaluate our BiomedCurator system from several aspects: TODO 
 
 # Acknowledgement
 This work is based on results obtained from a project commissioned by the Public/Private R&D Investment Strategic Expansion PrograM ([PRISM](https://www.nibiohn.go.jp/prism/about/))
