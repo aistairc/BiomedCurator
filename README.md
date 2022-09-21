@@ -18,7 +18,7 @@ With the growth of data-driven science, the curation of public and community dat
 # BiomedCurator DEMO
 The BiomedCurator system provides a web interface to facilitate the process of creating, organising, and maintaining data sets so they can be accessed and used by researchers, biologists, or physiologist looking for information. In our demo, users can input a PubMed/ClinicalTrial id, the system involves detecting, collecting, linking, relation mapping, indexing, and classifing of entittes over the entire given article. 
 
-Users can access our demo via [http://underconstruction/biomedcurator/](http://underconstruction/biomedcurator/).
+Users can access our demo via [https://biomed-text.airc.aist.go.jp/biomedcurator/](https://biomed-text.airc.aist.go.jp/biomedcurator/).
 
 ![Demo interface](images/biomed_curator_3.png)
 
