@@ -164,15 +164,15 @@ If you find this work helpful, please use the following citation:
 
 ```
 @inproceedings{biomed_curator_2022,
-    title = "BioMedCurator: an Interactive Web Application for Template Filler from Biomedical Literature",
-    author = "To be appeared",
-    booktitle = "To be appeared",
-    month = To be appeared,
-    year = "To be appeared",
+    title = "BiomedCurator: Data Curation for Biomedical Literature",
+    author = "To appear",
+    booktitle = "To appear",
+    month = To appear,
+    year = "To appear",
     address = "Online",
-    publisher = "To be appeared",
-    url = "To be appeared",
-    pages = "To be appeared",
+    publisher = "To appear",
+    url = "To appear",
+    pages = "To appear",
 } 
 ```
 
