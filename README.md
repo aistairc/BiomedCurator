@@ -165,7 +165,7 @@ If you find this work helpful, please use the following citation:
 ```
 @inproceedings{biomed_curator_2022,
     title = "BiomedCurator: Data Curation for Biomedical Literature",
-    author = "Mohammad Golam Sohrab, Khoa N. A. Duong, Masami Ikeda, Goran Topi ́c, Yayoi Natsume-Kitatani, Masakata Kuroda, Mari Nogami Itoh, HiroyaTakamur",
+    author = "Mohammad Golam Sohrab, Khoa N. A. Duong, Masami Ikeda, Goran Topić, Yayoi Natsume-Kitatani, Masakata Kuroda, Mari Nogami Itoh, Hiroya Takamura",
     booktitle = "To appear",
     month = To appear,
     year = "To appear",
