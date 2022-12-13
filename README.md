@@ -166,13 +166,14 @@ If you find this work helpful, please use the following citation:
 @inproceedings{biomed_curator_2022,
     title = "BiomedCurator: Data Curation for Biomedical Literature",
     author = "Mohammad Golam Sohrab, Khoa N. A. Duong, Masami Ikeda, Goran Topić, Yayoi Natsume-Kitatani, Masakata Kuroda, Mari Nogami Itoh, Hiroya Takamura",
-    booktitle = "The 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics",
+    Volume = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th International Joint Conference on Natural Language Processing: System Demonstrations",
     month = "November",
     year = "2022",
-    address = "Online",
-    publisher = "The Asia-Pacific Chapter of the Association for Computational Linguistics",
-    url = "To appear",
-    pages = "To appear",
+    address = "Taipei, Taiwan",
+    Venues = "AACL|IJCNLP",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.aacl-demo.8",
+    pages = "63-71",
 } 
 ```
 
