@@ -172,7 +172,7 @@ If you find this work helpful, please use the following citation:
     address = "Taipei, Taiwan",
     Venues = "AACL|IJCNLP",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.aacl-demo.8",
+    url = [https://aclanthology.org/2022.aacl-demo.8](https://aclanthology.org/2022.aacl-demo.8),
     pages = "63-71",
 } 
 ```
